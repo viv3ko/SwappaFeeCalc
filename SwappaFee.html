@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      p {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      #banner {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        width: 100%;
+        height: 100px;
+        z-index: -1;
+        background-color: #008339;
+      }
+
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .title {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-size: 25px;
+        text-align: center;
+        margin-top: 0px;
+      }
+
+      .ins {
+        background-color: #eceff1;
+        box-shadow: none;
+        padding: 20px;
+        border-radius: 0.75rem;
+        border: none;
+        margin-bottom: 20px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        width: 30%;
+        vertical-align: top;
+      }
+
+      .term {
+        background-color: #eceff1;
+        box-shadow: none;
+        padding: 20px;
+        border-radius: 0.75rem;
+        border: none;
+        margin-bottom: 20px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        width: 30%;
+        display: inline-block;
+        vertical-align: bottom;
+        margin-right: 15px;
+      }
+
+      .swappa {
+        background-color: #eceff1;
+        box-shadow: none;
+        padding: 20px;
+        border-radius: 0.75rem;
+        border: none;
+        margin-bottom: 20px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        width: 60%;
+        display: inline-block;
+        vertical-align: bottom;
+        text-align: center;
+      }
+
+      .labels {
+        text-align: center;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      .out {
+        background-color: #eceff1;
+        font-size: 20px;
+        box-shadow: none;
+        padding: 20px;
+        border-radius: 0.75rem;
+        border: none;
+        height: 20px;
+        width: 5%;
+        max-height: 3%;
+        margin-bottom: 20px;
+        margin-right: 50px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        vertical-align: top;
+      }
+
+      .headings {
+        align-items: center;
+        font-size: 125%;
+        box-shadow: none;
+        padding: 20px;
+        border-radius: 0.75rem;
+        border: none;
+        height: 100%;
+        margin-bottom: 20px;
+        max-width: 10%;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        vertical-align: top;
+      }
+
+      .d:hover {
+        color: #008339;
+      }
+
+      .d:active {
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+
+  <body style="width: 100%">
+    <img id="banner" />
+
+    <a>
+      <img
+        src="https://static.swappa.com/static/images/logos/swappa_wordmark_ffffff_drop_e4611b.svg"
+        alt="Swappa Logo"
+        height="50"
+        width="175"
+      />
+    </a>
+
+    <h1 class="title">FEE CALCULATOR</h1>
+
+    <div class="ins">
+      <b>INFORMATION</b><br /><br />
+      <u><b>Function:</b></u> This calculator calculates the Buyers Fee, the
+      Sellers Fee, Paypals Deduction, Listing Price and Sellers Gain of a
+      potential device sale based of a specific input Asking Price.<br /><br />
+      <u><b>Instructions:</b></u> Input the Asking Price (in dollars) you wish
+      to sell your device for. The application shall calculate the desired
+      values.<br /><br />
+      <u><b>Disclaimer:</b></u> All values are approximations as I cannot take
+      in account for the rounding that Swappa uses.
+    </div>
+
+    <div class="term">
+      <b>TERMINOLOGY</b><br /><br />
+      <u><b>Ask Price:</b></u> The dollar amount you want from the sale.<br /><br />
+      <u><b>Sellers Fee:</b></u> The amount you owe Swappa (deducted from your
+      Ask Price).<br /><br />
+      <u><b>Buyers Fee:</b></u> The amount the buyer owes Swappa (added to your
+      original Ask Price).<br /><br />
+      <u><b>PayPal Deduction:</b></u> The amount you owe PayPal (deducted from
+      your Ask Price).<br /><br />
+      <u><b>Listing Price:</b></u> The price a potential buyer will see (Ask
+      Price + Buyers Fee).<br /><br />
+      <u><b>Payout:</b></u> Approximate payout made from the sale (what you
+      should see in PayPal).
+    </div>
+
+    <div class="swappa">
+      A breakdown of Swappa's fees can be viewed
+      <a href="https://swappa.com/faq/answer/partner-fee">here</a>.
+    </div>
+
+    <input
+      type="text"
+      ,
+      id="input"
+      style="
+        position: absolute;
+        left: 62%;
+        top: 250px;
+        height: 50px;
+        width: 125px;
+        font-size: 30px;
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+      "
+    /><br /><br />
+
+    <p class="headings" style="position: absolute; left: 60%; top: 200pxzz">
+      Enter Ask Price
+    </p>
+
+    <p class="headings" style="position: absolute; left: 40%; top: 55%">
+      Sellers Fee
+    </p>
+    <p class="headings" style="position: absolute; left: 55%; top: 400px">
+      Buyers Fee
+    </p>
+    <p class="headings" style="position: absolute; left: 67%; top: 400px">
+      PayPal Deduction
+    </p>
+    <p class="headings" style="position: absolute; left: 85%; top: 400px">
+      Listing Price
+    </p>
+    <p class="headings" style="position: absolute; left: 63%; top: 550px">
+      Payout
+    </p>
+
+    <p class="out" id="sf" style="position: absolute; left: 40%; top: 63%">0</p>
+    <p class="out" id="bf" style="position: absolute; left: 56%; top: 450px">
+      0
+    </p>
+    <p class="out" id="pd" style="position: absolute; left: 71%; top: 450px">
+      0
+    </p>
+    <p class="out" id="lp" style="position: absolute; left: 86%; top: 450px">
+      0
+    </p>
+    <p class="out" id="p" style="position: absolute; left: 63%; top: 600px">
+      0
+    </p>
+  </body>
+</html>
+
+<script>
+  var txt = document.getElementById("input");
+  onkeyup = function () {
+    sf.textContent = (txt.value * 0.03).toFixed(2);
+    bf.textContent = (txt.value * 0.03).toFixed(2);
+    pd.textContent = (txt.value * 0.0349 + 0.49).toFixed(2);
+    lp.textContent = (parseInt(txt.value) + txt.value * 0.03).toFixed(2);
+    p.textContent = (
+      parseInt(txt.value) -
+      txt.value * 0.03 -
+      (txt.value * 0.0349 + 0.49).toFixed(2)
+    ).toFixed(2);
+  };
+</script>
